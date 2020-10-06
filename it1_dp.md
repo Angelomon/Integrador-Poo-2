@@ -2,17 +2,17 @@
 ## Diseño orientado a objetos
 
 ### Calificaciones
-| Calificacion |            
+| Calificacion | |    
 | --- | ----------- |
 | Materia | Title |
 | Alumno | Title |
 | Nota | Title |
 ### Materias
-| Materia |
+| Materia | |
 | --- | ----------- |
 | Nombre | Title |
 ### Alumnos
-| Alumno |
+| Alumno | |
 | --- | ----------- |
 | DNI | Title |
 | Nombre | Title |
