@@ -8,7 +8,7 @@
 | Alumno | Title |
 | Nota | Title |
 ### Materias
-| Materia | |
+| Materia |
 | --- | ----------- |
 | Nombre | Title |
 ### Alumnos
