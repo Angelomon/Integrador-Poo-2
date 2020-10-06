@@ -3,7 +3,7 @@
 
 
 | Calificacion |            
-| --- | ----------- |       
+| --- | ----------- |
 | Materia | Title |
 | Alumno | Title |
 | Nota | Title |
