@@ -1,19 +1,18 @@
 # Documento de diseño y planificación
 ## Diseño orientado a objetos
 
-
+### Calificaciones
 | Calificacion |            
 | --- | ----------- |
-
 | Materia | Title |
 | Alumno | Title |
 | Nota | Title |
-
-| Materia | 
+### Materias
+| Materia |
 | --- | ----------- |
 | Nombre | Title |
-
-| Alumno | 
+### Alumnos
+| Alumno |
 | --- | ----------- |
 | DNI | Title |
 | Nombre | Title |
