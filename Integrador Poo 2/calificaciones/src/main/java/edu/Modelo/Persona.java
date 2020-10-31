@@ -32,7 +32,7 @@ public class Persona {
         DNI = dNI;
     }
 
-    public Persona(String nombre, String apellido, int dNI) {
+    public Persona(int dNI, String nombre, String apellido ) {
         this.nombre = nombre;
         this.apellido = apellido;
         DNI = dNI;
@@ -70,6 +70,11 @@ public class Persona {
         } else if (!nombre.equals(other.nombre))
             return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return  DNI + " " + apellido + " " + nombre ;
     }
 
     

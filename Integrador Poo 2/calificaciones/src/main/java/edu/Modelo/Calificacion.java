@@ -1,26 +1,16 @@
 package edu.Modelo;
-import java.util.ArrayList;
-import java.util.List;
+
 public class Calificacion{
     private int Calificacion;
     private Materia Materia;
     private Persona Alumno;
 
-    private List<Calificacion> calificaciones = new ArrayList<>();
+    
     
     public Calificacion(){
 
     }
-    public void agregarCalificacion(Calificacion calificacion){
-        this.calificaciones.add(calificacion);
-    }
-    public int getCalificacion() {
-        return Calificacion;
-    }
-
-    public void setCalificacion(int calificacion) {
-        Calificacion = calificacion;
-    }
+    
 
     public Materia getMateria() {
         return Materia;
@@ -38,20 +28,29 @@ public class Calificacion{
         Alumno = alumno;
     }
 
-    public List<Calificacion> getCalificaciones() {
-        return calificaciones;
+    public Calificacion(int calificacion, Materia materia, Persona alumno) {
+        this.Calificacion = calificacion;
+        this.Materia = materia;
+        this.Alumno = alumno;
+        this.Materia.agregarCalificacion(this);
     }
 
-    public void setCalificaciones(List<Calificacion> calificaciones) {
-        this.calificaciones = calificaciones;
+    
+
+    
+
+
+    @Override
+    public String toString() {
+        return  Alumno + " " + Calificacion + " " + Materia ;
     }
 
-    public Calificacion(int calificacion, edu.Modelo.Materia materia, Persona alumno,
-            List<Calificacion> calificaciones) {
+    public int getCalificacion() {
+        return Calificacion;
+    }
+
+    public void setCalificacion(int calificacion) {
         Calificacion = calificacion;
-        Materia = materia;
-        Alumno = alumno;
-        this.calificaciones = calificaciones;
     }
 
     @Override
@@ -61,7 +60,6 @@ public class Calificacion{
         result = prime * result + ((Alumno == null) ? 0 : Alumno.hashCode());
         result = prime * result + Calificacion;
         result = prime * result + ((Materia == null) ? 0 : Materia.hashCode());
-        result = prime * result + ((calificaciones == null) ? 0 : calificaciones.hashCode());
         return result;
     }
 
@@ -86,18 +84,7 @@ public class Calificacion{
                 return false;
         } else if (!Materia.equals(other.Materia))
             return false;
-        if (calificaciones == null) {
-            if (other.calificaciones != null)
-                return false;
-        } else if (!calificaciones.equals(other.calificaciones))
-            return false;
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Calificacion [Alumno=" + Alumno + ", Calificacion=" + Calificacion + ", Materia=" + Materia
-                + ", calificaciones=" + calificaciones + "]";
-    }
-    
 }
