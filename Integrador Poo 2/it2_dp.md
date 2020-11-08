@@ -18,13 +18,7 @@
 | Nombre | Text |
 | Apellido | Text |
 ## Backlog de iteración
-- Realizar el ingreso de alumnos.
-- Realizar el ingreso de materias.
-- Realizar el ingreso de calificaciones.
+- Realizar persistencia de datos.
+
 ## Notas
-- [x] Subir readme.md
-- [x] Subir erp.md
-- [x] Subir it1_dp.md
-- [x] Registrar nuevos alumnos
-- [x] Registrar nuevas materias
-- [x] Registrar calificaciones
+- [ ] Integrar sql2object
