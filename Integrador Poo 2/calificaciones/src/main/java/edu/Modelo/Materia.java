@@ -1,12 +1,22 @@
 package edu.Modelo;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Materia {
     private String nombre;
+    private int id;
     private List<Calificacion> calificaciones = new ArrayList<>();
-    public Materia(){
 
+    public Materia() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -14,6 +24,10 @@ public class Materia {
     }
 
     public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Materia(String nombre) {
         this.nombre = nombre;
     }
 
@@ -42,10 +56,6 @@ public class Materia {
         return true;
     }
 
-    public Materia(String nombre) {
-        this.nombre = nombre;
-    }
-
     @Override
     public String toString() {
         return nombre;
@@ -54,10 +64,11 @@ public class Materia {
     public List<Calificacion> getCalificaciones() {
         return calificaciones;
     }
-    public void agregarCalificacion(Calificacion calificacion){
+
+    public void agregarCalificacion(Calificacion calificacion) {
         this.calificaciones.add(calificacion);
     }
-    
+
     public void setCalificaciones(List<Calificacion> calificaciones) {
         this.calificaciones = calificaciones;
     }

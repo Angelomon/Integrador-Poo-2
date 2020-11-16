@@ -1,35 +1,21 @@
 package edu;
 
-import org.sql2o.Sql2o;
-
-import edu.Modelo.Calificacion;
-import edu.Modelo.Persona;
-import edu.Modelo.Materia;
 import io.javalin.*;
-import edu.Repositorio.*;
-
-/**
- * Hello world!
- *
- */
+import edu.Modelo.*;
+import org.sql2o.Sql2o;
+import edu.Sql2oCalificacionRepositorio;
+import edu.CalificacionRepositorio;
+import edu.MateriaRepositorio;
+import edu.RepositorioExcepcion;
+import edu.Sql2oMateriaRepositorio;
 
 public class App {
     public static void main(String[] args) {
-        var sql2o = new Sql2o("jdbc:postgresql://localhost:54074/CalificacionesDB", "postgresql", "1234");
-
-        var curso = new Materia("Poo1");
-
-        var alumno = new Persona(41303618, "Ruben", "Viera");
-        var alumno2 = new Persona(41300567, "Facundo", "Pereira");
-        // var nota = new Calificacion();
-
-        var nota1 = new Calificacion(10, curso, alumno);
-        var nota2 = new Calificacion(8, curso, alumno2);
-
-        System.out.println(curso);
-        System.out.println(alumno);
-        System.out.println(curso.getCalificaciones());
-        // Javalin app = Javalin.create().start(7000);
-        // app.get("/", ctx -> ctx.result("Hola Poo 2"));
+        var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/CalificacionesDB", "postgresql", "1234");
+        var MateriaRepositorio = new Sql2oMateriaRepositorio(sql2o);
+        // var MateriaControlador = new CursosControlador(cursosRepositorio);
+        var CalificacionRepositorio = new Sql2oCalificacionRepositorio(sql2o);
+        // var revisionesControlador = new RevisionesControlador(revisionesRepositorio,
+        // cursosRepositorio);
     }
 }
