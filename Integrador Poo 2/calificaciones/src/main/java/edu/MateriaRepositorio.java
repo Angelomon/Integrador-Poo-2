@@ -6,13 +6,13 @@ import edu.Modelo.*;
 public interface MateriaRepositorio {
     void agregar(Materia materia);
 
-    List<Materia> listar();
+    List<Materia> listar() throws RepositorioExcepcion;
 
-    int crear(Materia materia);
+    int crear(Materia materia) throws RepositorioExcepcion;;
 
-    boolean borrar(Materia materia);
+    boolean borrar(Materia materia) throws RepositorioExcepcion;;
 
-    boolean modificar(Materia materia);
+    boolean modificar(Materia materia) throws RepositorioExcepcion;;
 
-    Materia obtener(int id);
+    Materia obtener(int id) throws RepositorioExcepcion;;
 }
