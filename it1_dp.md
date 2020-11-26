@@ -25,6 +25,10 @@
 - [x] Subir readme.md
 - [x] Subir erp.md
 - [x] Subir it1_dp.md
-- [ ] Registrar nuevos alumnos
-- [ ] Registrar nuevas materias
-- [ ] Registrar calificaciones
+- [x] Crear una base de datos
+- [x] Crear la tabla materias
+- [x] Crear la tabla calificaciones
+- [x] Crear la tabla alumnos
+- [x] Registrar nuevos alumnos
+- [x] Registrar nuevas materias
+- [x] Registrar calificaciones
