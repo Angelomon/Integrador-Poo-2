@@ -16,7 +16,12 @@ public class Sql2oMateriaRepositorio implements MateriaRepositorio {
 
     @Override
     public void agregar(Materia materia) {
-
+        try (Connection conn = sql2o.open()) {
+            String sql = "INSERT INTO Materia (nombre) VALUES (:nombre);";
+            return;
+        } catch (Sql2oException e) {
+            throw new RepositorioExcepcion();
+        }
     }
 
     @Override

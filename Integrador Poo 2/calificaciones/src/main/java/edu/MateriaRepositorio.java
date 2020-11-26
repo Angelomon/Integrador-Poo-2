@@ -8,11 +8,11 @@ public interface MateriaRepositorio {
 
     List<Materia> listar() throws RepositorioExcepcion;
 
-    int crear(Materia materia) throws RepositorioExcepcion;;
+    int crear(Materia materia) throws RepositorioExcepcion;
 
-    boolean borrar(Materia materia) throws RepositorioExcepcion;;
+    boolean borrar(Materia materia) throws RepositorioExcepcion;
 
-    boolean modificar(Materia materia) throws RepositorioExcepcion;;
+    boolean modificar(Materia materia) throws RepositorioExcepcion;
 
-    Materia obtener(int id) throws RepositorioExcepcion;;
+    Materia obtener(int id) throws RepositorioExcepcion;
 }
